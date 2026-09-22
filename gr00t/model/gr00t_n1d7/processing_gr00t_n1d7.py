@@ -79,6 +79,7 @@ EMBODIMENT_TAG_TO_PROJECTOR_INDEX = {
     "unitree_g1_upper_body": 10,
     "unitree_g1_upper_right_hand": 10,
     "unitree_g1_smpl": 12,
+    "unitree_g1_new": 10,
     }
 
 

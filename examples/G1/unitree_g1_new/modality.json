@@ -1,0 +1,42 @@
+{
+    "state": {
+        "robot_29dof": {
+            "start": 0,
+            "end": 29
+        },
+        "gripper": {
+            "start": 29,
+            "end": 31
+        }
+    },
+    "action": {
+        "robot_29dof": {
+            "start": 0,
+            "end": 29
+        },
+        "gripper": {
+            "start": 29,
+            "end": 31
+        },
+        "base_command": {
+            "start": 31,
+            "end": 35
+        }
+    },
+    "video": {
+        "head_stereo_left": {
+            "original_key": "observation.images.head_stereo_left"
+        },
+        "wrist_left": {
+            "original_key": "observation.images.wrist_left"
+        },
+        "wrist_right": {
+            "original_key": "observation.images.wrist_right"
+        }
+    },
+    "language": {
+        "task": {
+            "original_key": "task"
+        }
+    }
+}

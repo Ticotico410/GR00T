@@ -52,6 +52,7 @@ class EmbodimentTag(Enum):
     - ROBOCASA_PANDA_OMRON  -> "robocasa_panda_omron"
     - ROBOCASA_GR1_TABLETOP -> "robocasa_gr1_tabletop"
     - UNITREE_G1_SMPL       -> "unitree_g1_smpl"
+    - UNITREE_G1_NEW        -> "unitree_g1_new"
 
     Use ``EmbodimentTag.resolve(s)`` to look up a tag by name or value,
     case-insensitively.
@@ -173,6 +174,14 @@ class EmbodimentTag(Enum):
     4-camera setup as WBC. Uses the custom-embodiment finetuning projector slot.
     """
 
+    UNITREE_G1_NEW = "unitree_g1_new"
+    """
+    Real-world Unitree G1 joint-space control (hangzhou LeRobot export):
+    state robot_29dof(29) + gripper(2); action + base_command(4). Cameras:
+    head_stereo_left + wrist_left/right. No SMPL / rot6d root processing.
+    Uses the custom-embodiment finetuning projector slot.
+    """
+
     @classmethod
     def resolve(cls, tag: "str | EmbodimentTag") -> "EmbodimentTag":
         """Resolve a string to an EmbodimentTag, case-insensitively.
@@ -254,6 +263,7 @@ FINETUNE_ONLY_TAGS: frozenset[EmbodimentTag] = frozenset(
         EmbodimentTag.UNITREE_G1_UPPER_BODY,
         EmbodimentTag.UNITREE_G1_UPPER_RIGHT_HAND,
         EmbodimentTag.UNITREE_G1_SMPL,
+        EmbodimentTag.UNITREE_G1_NEW,
     }
 )
 """Tags for custom robots (finetuning only, not in any shipped checkpoint)."""
